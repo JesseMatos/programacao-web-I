@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Contato</title>
+</head>
+
+<body>    
+    <h2>Cadastrar Novo Contato</h2>
+
+    <!-- Passo 1: Estrutura base do formulário -->
+    <form action="/salvar-contato" method="POST">
+
+        <!-- Passo 2: Nome e Sobrenome -->
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <br>
+        <div>
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome" required>
+        </div>
+        <br>
+
+        <!-- Passo 3: E-mail com validação nativa do HTML5 -->
+        <div>
+            <label for="e-mail">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com">
+        </div>
+        <br>
+
+        <!-- Passo 4: Telefone com máscara (Regex) via atributo pattern -->
+        <div>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\d{5}-\d{4}" placeholder="(XX)XXXXX-XXXX" title="O formato deve ser (XX)XXXXX-XXXX" required>
+        </div>
+        <br>
+
+        <!-- Passo 5: Cidade e Estado (Listbox) -->
+        <div>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="">Selecione um estado...</option>
+                <option value="AL">Alagoas</option>
+                <option value="PE">Pernambuco</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <!-- Adicione mais estados conforme necessário -->
+            </select>
+        </div>
+        <br>
+
+        <!-- Passo 6: Botão de submissão -->
+        <button type="submit">Salvar Contato</button>
+    </form>
+</body>
+</html>
