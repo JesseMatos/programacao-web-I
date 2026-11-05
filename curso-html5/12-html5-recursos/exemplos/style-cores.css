@@ -1,0 +1,20 @@
+#lh {
+    color:white;
+}
+
+#pp {
+    color: yellow;
+}
+
+.homologacao, 
+.producao {
+    background-color: antiquewhite;
+}
+
+.producao #p {
+    color: aqua;
+}
+
+h2 {
+    background-color: black;
+}
